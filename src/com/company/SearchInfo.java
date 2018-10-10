@@ -3,9 +3,7 @@ import java.util.Scanner;
 
 public class SearchInfo {
 
-    public static void searchData()
-    {
-
+    public static void searchData() {
         String finAnswer;
         boolean finished;
         do {
@@ -14,17 +12,14 @@ public class SearchInfo {
             Scanner scan = new Scanner(System.in);
             String userInput = scan.nextLine();
 
-            for (Client c : Data.Clients()
-            ) {
-                if (c.FullName.equals(userInput)) {
-                    System.out.println(c.toString());
+            for (Client client : Data.getInstance().getClients()) {
+                if (client.getFullName().equals(userInput)) {
+                    System.out.println("This record matches the search query.");
+                    System.out.println(client.toString());
                     break;
                 }
-                else {
-                    //TODO make sure this only displays once
-                    System.out.println("This record is unable to be found!");
-                }
 
+                    System.out.println("This record does not match with the search query!");
 
             }
 
@@ -43,6 +38,7 @@ public class SearchInfo {
 
         } while (finished != true);
 
+        Menu.displayMenu();
         //This is where you will go back to the choice screen.
 
     }

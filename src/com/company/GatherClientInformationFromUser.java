@@ -2,24 +2,21 @@ package com.company;
 
 import java.util.Scanner;
 
-public class AddNew {
+public class GatherClientInformationFromUser {
 
-    public static void newClient()
-    {
-        boolean addNewClient;
-
-        System.out.println("Please enter the full details of the new client! \nThis information must follow a specific pattern. \nName Address Age");
+    public static void newClient() {
+        System.out.println("Please enter the full name of the new client");
         Scanner scan = new Scanner(System.in);
-        String userInput = scan.nextLine();
+        String fullName = scan.nextLine();
+        System.out.println("Please enter the full address of the new client");
+        String fullAddress = scan.nextLine();
+        System.out.println("Please enter the age of the new client");
+        int age = scan.nextInt();
 
 
-        addNewClient = true;
+        Client newClient = new Client(fullName, fullAddress, age);
 
-        Data.clients().add();
-
-
-
-
+        Data.getInstance().addClient(newClient);
 
     }
 }

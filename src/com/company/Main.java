@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Main {
 
+    //Hashmap full of "Usernames" and "passwords" for users of the system
     public static Map<String, String> logins = new HashMap<String, String>() {{
         put("Jimmy", "Jimb0257");
         put("Carl", "Carlo56");
@@ -22,6 +23,8 @@ public class Main {
 
         String login_usernameInput;
         String login_password;
+
+
 
         //Test to make sure the array is working and can display info
 //        int i, j;
@@ -49,7 +52,7 @@ public class Main {
             Menu.displayMenu();
         }
 
-        scanner.next();
+        //scanner.next();
 
 
 

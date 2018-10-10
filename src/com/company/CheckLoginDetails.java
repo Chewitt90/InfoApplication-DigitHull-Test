@@ -18,7 +18,7 @@ public class CheckLoginDetails {
                     System.out.println("Welcome " + username);
                     return true;
                 } else {
-                    System.out.println("The username or password is incorrect");
+                    System.out.println("The username or password is incorrect.");
                 }
             }
         }

@@ -8,7 +8,7 @@ public class Menu {
             public static void displayMenu()
             {
 
-                System.out.println("Please choose from the options below! \n 1. Search Clients \n 2. Edit Existing Client Record \n 3. Add New Client Record");
+                System.out.println("Please choose from the options below! \n 1. Search clients \n 2. Edit Existing Client Record (Incomplete) \n 3. Add New Client Record");
                 Scanner scan = new Scanner(System.in);
                 String userInput = scan.nextLine();
 
@@ -23,7 +23,7 @@ public class Menu {
                         break;
 
                     case "3":
-                        AddNew.newClient();
+                        GatherClientInformationFromUser.newClient();
                         break;
                 }
 

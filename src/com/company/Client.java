@@ -1,20 +1,22 @@
 package com.company;
 
-public class Client
-{
-    public Client(String fullName, String address, int age)
-    {
-        FullName = fullName;
-        Address = address;
-        Age = age;
+public class Client {
+    private String fullName;
+    private String address;
+    private int age;
+
+    public Client(String fullName, String address, int age) {
+        this.fullName = fullName;
+        this.address = address;
+        this.age = age;
     }
 
-    public String FullName;
-    public String Address;
-    public int Age;
+    public String getFullName() {
+        return this.fullName;
+    }
 
     @Override
-    public java.lang.String toString() {
-        return FullName + " Address: " + Address + " Age: " + Age;
+    public String toString() {
+        return fullName + " address: " + address + " age: " + age;
     }
 }
