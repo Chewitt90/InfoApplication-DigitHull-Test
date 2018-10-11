@@ -39,18 +39,23 @@ public class Main {
 //
 //        }
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter your username, then press Enter!");
-        login_usernameInput = scanner.next();
-        System.out.print("Please enter your password, then press Enter!");
-        login_password = scanner.next();
-        //System.out.println(login_usernameInput);
-        //System.out.println(login_password);
+        do {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Please enter your username, then press Enter!");
+            login_usernameInput = scanner.next();
+            System.out.print("Please enter your password, then press Enter!");
+            login_password = scanner.next();
+            //System.out.println(login_usernameInput);
+            //System.out.println(login_password);
 
-        if (CheckLoginDetails.checkIfValid(login_usernameInput, login_password, logins)) {
+            if (CheckLoginDetails.checkIfValid(login_usernameInput, login_password, logins)) {
 
-            Menu.displayMenu();
+                Menu.displayMenu();
+                break;
+            }
         }
+        while (true);
+
 
         //scanner.next();
 

@@ -8,6 +8,7 @@ public class CheckLoginDetails {
     //Check to see if input from user matches a username and password in the logins array
     public static boolean checkIfValid(String login_usernameInput, String login_password, Map<String, String> logins) {
 
+        boolean validDetails = false;
 
         for (String username:logins.keySet()
              ) {
@@ -16,14 +17,22 @@ public class CheckLoginDetails {
                 if (login_password.equals(logins.get(username))) {
                     System.out.println("Login details accepted!");
                     System.out.println("Welcome " + username);
-                    return true;
-                } else {
-                    System.out.println("The username or password is incorrect.");
+                    validDetails = true;
                 }
             }
+
+
         }
 
-        return false;
+        if (validDetails){
+            return  true;
+        }
+        else
+        {
+            System.out.println("The username or password is incorrect.");
+            return false;
+        }
+
 
 
         //Original code since been improved
