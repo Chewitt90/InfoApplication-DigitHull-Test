@@ -2,6 +2,8 @@
 
 The application works in the command line.
 
+The runnable .jar file can be found at this location InfoApplication/target and is called InfoApplication-1.0-SNAPSHOT.jar 
+
 The idea of the Info Application that I created is that it would display information which are "Clients" that is inside the application.
 The user would also be able to add a new "Client" to the list that is already there.
 There was also an idea to be able to modify the "Clients" that are already in the list. However this has not been completed.
